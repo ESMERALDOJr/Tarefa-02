@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <title>Exercício 05</title>
+</head>
+
+<body>
+    <div>
+
+        Escreva código com JSX, diretamente em uma página HTML, para calcular o quadrado da
+        soma de três números inteiros.
+
+    </div>
+
+<div id="root"></div>
+
+    <script>
+
+        var num1 = + parseFloat(prompt("Primeiro número: "));
+        var num2 = + parseFloat(prompt("Segundo número: "));
+        var num3 = + parseFloat(prompt("Terceiro número: "));
+
+        function calcQuadrado() {
+                      
+            var calcQuadrado = Math.pow((num1 + num2 + num3), 2).toFixed(1);
+
+            //alert('Média ponderada: ' + calcQuadrado);
+
+            document.write('<br/>O quadrado da soma de <strong>' +num1 + ', ' +num2 + ' e ' + num3 + '</strong> é: <strong/>' + calcQuadrado);
+        }
+
+        ReactDOM.render(calcQuadrado(), document.getElementById("root"));
+
+    </script>
+
+</body>
+
+</html>
